@@ -38,6 +38,12 @@ tramp
 Thumbs.db
 Desktop.ini
 
+# Virtualenv stuff
+.Python
+bin/*
+include/*
+lib/*
+
 # media and static folders where files get collected
 media/*
 static/*

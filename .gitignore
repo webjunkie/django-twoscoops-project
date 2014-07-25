@@ -38,3 +38,6 @@ tramp
 Thumbs.db
 Desktop.ini
 
+# media and static folders where files get collected
+media/*
+static/*

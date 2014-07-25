@@ -112,6 +112,7 @@ STATICFILES_FINDERS = (
 SECRET_KEY = r"{{ secret_key }}"
 ########## END SECRET CONFIGURATION
 
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 ########## SITE CONFIGURATION
 # Hosts/domain names that are valid for this site

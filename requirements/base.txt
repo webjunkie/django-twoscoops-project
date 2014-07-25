@@ -8,7 +8,6 @@ django_compressor
 django-crispy-forms
 django-markup-deprecated
 django-widget-tweaks
-BeautifulSoup
 Markdown
 MySQL-python
 python-memcached

@@ -68,11 +68,20 @@ Creating your project
 To create a new Django project called '**icecream**' using
 django-twoscoops-project, run the following command::
 
-    $ django-admin.py startproject --template=https://github.com/twoscoops/django-twoscoops-project/archive/master.zip --extension=py,rst,html,gitmodules icecream_project
+    $ django-admin.py startproject --template=https://github.com/twoscoops/django-twoscoops-project/archive/master.zip --extension=py,rst,html icecream_project
 
 For Django 1.5 users, we recommend::
 
-    $ django-admin.py startproject --template=https://github.com/twoscoops/django-twoscoops-project/archive/1.5.zip --extension=py,rst,html,gitmodules icecream_project
+    $ django-admin.py startproject --template=https://github.com/twoscoops/django-twoscoops-project/archive/1.5.zip --extension=py,rst,html icecream_project
+    
+After that, initialize git, add bootstrap as submodule and checkout its latest version (you might not want the unstable master)::
+
+	$ cd icecream_project/
+    $ git init
+    $ git submodule add https://github.com/twbs/bootstrap.git icecream_project/static/bootstrap
+    $ cd icecream_project/static/bootstrap/
+    $ git checkout v3.2.0
+    
 
 Installation of Dependencies
 =============================

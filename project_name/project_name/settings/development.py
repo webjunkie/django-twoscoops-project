@@ -26,9 +26,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': normpath(join(DJANGO_ROOT, 'default.db')),
-        'USER': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': SITE_NAME,
+        'USER': 'root',
         'PASSWORD': '',
         'HOST': '',
         'PORT': '',
@@ -42,6 +42,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        # 'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
     }
 }
 ########## END CACHE CONFIGURATION
@@ -58,6 +59,10 @@ MIDDLEWARE_CLASSES += (
 )
 
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
 
 # http://django-debug-toolbar.readthedocs.org/en/latest/installation.html
 INTERNAL_IPS = ('127.0.0.1',)

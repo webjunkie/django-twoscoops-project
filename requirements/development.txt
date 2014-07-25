@@ -1,0 +1,4 @@
+# Local development dependencies go here
+-r test.txt
+git+https://github.com/django-debug-toolbar/django-debug-toolbar.git#egg=django-debug-toolbar
+Sphinx==1.2.2
